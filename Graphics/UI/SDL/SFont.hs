@@ -8,6 +8,7 @@ module Graphics.UI.SDL.SFont
    , write
    , textWidth
    , textHeight
+   , writeChar
    ) where
 
 import Graphics.UI.SDL
@@ -18,20 +19,19 @@ import Data.Char (ord)
 
 data SFont = SFont { surface :: Surface 
                    , charPos :: Array Int Int
-                   }
+                   } deriving (Show)
 
 -- | Load a font from an SDL surface
 initFont :: Surface -> IO SFont
 initFont surface = do pinks <- let nums = [0..surfaceGetWidth surface] 
                                in sequence (map isPink nums) >>= return . zip nums 
                       let pos = ( map fst $ 
-                                  filter ((== False) . snd) $ 
                                   map head $ 
                                   groupBy (\a b -> snd a == snd b) $ 
                                   pinks ) ++ [surfaceGetWidth surface]
                        in return $ SFont surface $ listArray (0,length pos) pos
   where                   
-    isPink x = do pink <- mapRGBA (surfaceGetPixelFormat surface) 255 0 255 255
+    isPink x = do pink <- mapRGB (surfaceGetPixelFormat surface) 255 0 255
                   color <- getPixel surface x 0
                   return $ pink == color
 
