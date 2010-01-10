@@ -1,0 +1,18 @@
+sfont-hs
+--------
+
+A simple port of the SFont library for bitmap fonts in SDL to Haskell.
+
+Written by Liam O'Connor-Davis.
+
+You need cabal and hssdl.
+
+cabal configure # configures package for building
+
+cabal build # builds pacakage
+
+cabal install # builds and installs package
+
+cabal haddock # generates haddock documentation
+
+cabal sdist # generate sdist
