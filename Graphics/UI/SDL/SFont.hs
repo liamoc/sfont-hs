@@ -9,6 +9,7 @@ module Graphics.UI.SDL.SFont
    , writeChar
    , textWidth
    , textHeight
+   , isPrintable
    ) where
 
 import Graphics.UI.SDL
@@ -46,6 +47,8 @@ write surf sfont (x, y) str = let xpos = map (+x) $ scanl (+) 0 $ map (charWidth
 writeChar :: Surface -> SFont -> (Int,Int) -> Char -> IO ()
 writeChar dest font@(SFont src charPos) (x,y) c = let offset = (ord c - 33) * 2 + 1                       
                                                   in if all (inRange $ bounds charPos) [offset, offset+1] 
+                                                      && x < surfaceGetWidth dest
+                                                      && y < surfaceGetWidth dest
                                                      then let cWidth = charWidth font c
                                                               cHeight = textHeight font
                                                               srcRect = Rect (charPos ! offset) 0 cWidth cHeight
@@ -57,6 +60,11 @@ charWidth (SFont _ charPos) c = let offset = (ord c - 33) * 2 + 1
                                 in if all (inRange $ bounds charPos) [offset, offset+1]
                                    then (charPos ! (offset + 1)) - (charPos ! offset)
                                    else (charPos ! 1) - (charPos ! 0)
+
+-- |Returns if a character is represented in a font's character set
+isPrintable :: SFont -> Char -> Bool
+isPrintable (SFont _ charPos ) c = let offset = (ord c - 33) * 2 + 1                       
+                                   in all (inRange $ bounds charPos) [offset, offset+1] 
 
 -- | Returns the width in pixels of a given string rendered in the given font
 textWidth :: SFont -> String -> Int
