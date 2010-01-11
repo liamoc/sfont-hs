@@ -1,5 +1,5 @@
 name:                SFont
-version:             0.1
+version:             0.1.1
 synopsis:            SFont SDL Bitmap Fonts
 description:         A haskell port of Karl Bartel's bitmap SFont library. Haddock documentation is available from the homepage
 category:            Graphics
