@@ -3,12 +3,12 @@
 -- Released under the BSD3 license
 
 module Graphics.UI.SDL.SFont 
-   ( initFont
-   , SFont
+   ( SFont
+   , initFont
    , write
+   , writeChar
    , textWidth
    , textHeight
-   , writeChar
    ) where
 
 import Graphics.UI.SDL
@@ -19,7 +19,7 @@ import Data.Char (ord)
 
 data SFont = SFont { surface :: Surface 
                    , charPos :: Array Int Int
-                   } deriving (Show)
+                   } 
 
 -- | Load a font from an SDL surface
 initFont :: Surface -> IO SFont
