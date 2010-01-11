@@ -1,0 +1,408 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--Rendered using the Haskell Html Library v0.2-->
+<HTML
+><HEAD
+><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"
+><TITLE
+>Graphics.UI.SDL.SFont</TITLE
+><LINK HREF="haddock.css" REL="stylesheet" TYPE="text/css"
+><SCRIPT SRC="haddock-util.js" TYPE="text/javascript"
+></SCRIPT
+><SCRIPT TYPE="text/javascript"
+>window.onload = function () {setSynopsis("mini_Graphics-UI-SDL-SFont.html")};</SCRIPT
+></HEAD
+><BODY
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="topbar"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD
+><IMG SRC="haskell_icon.gif" WIDTH="16" HEIGHT="16" ALT=" "
+></TD
+><TD CLASS="title"
+>SFont-0.1: SFont SDL Bitmap Fonts</TD
+><TD CLASS="topbut"
+><A HREF="src/Graphics-UI-SDL-SFont.html"
+>Source code</A
+></TD
+><TD CLASS="topbut"
+><A HREF="index.html"
+>Contents</A
+></TD
+><TD CLASS="topbut"
+><A HREF="doc-index.html"
+>Index</A
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="modulebar"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD
+><FONT SIZE="6"
+>Graphics.UI.SDL.SFont</FONT
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="section1"
+>Synopsis</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="body"
+><TABLE CLASS="vanilla" CELLSPACING="0" CELLPADDING="0"
+><TR
+><TD CLASS="decl"
+><SPAN CLASS="keyword"
+>data</SPAN
+>  <A HREF="#t%3ASFont"
+>SFont</A
+> </TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AinitFont"
+>initFont</A
+> :: <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/Graphics-UI-SDL-Types.html#t%3ASurface"
+>Surface</A
+> -&gt; <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/System-IO.html#t%3AIO"
+>IO</A
+> <A HREF="Graphics-UI-SDL-SFont.html#t%3ASFont"
+>SFont</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3Awrite"
+>write</A
+> :: <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/Graphics-UI-SDL-Types.html#t%3ASurface"
+>Surface</A
+> -&gt; <A HREF="Graphics-UI-SDL-SFont.html#t%3ASFont"
+>SFont</A
+> -&gt; (<A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/GHC-Types.html#t%3AInt"
+>Int</A
+>, <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/GHC-Types.html#t%3AInt"
+>Int</A
+>) -&gt; <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/Data-Char.html#t%3AString"
+>String</A
+> -&gt; <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/System-IO.html#t%3AIO"
+>IO</A
+> <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/GHC-Unit.html#t%3A%28%29"
+>()</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AwriteChar"
+>writeChar</A
+> :: <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/Graphics-UI-SDL-Types.html#t%3ASurface"
+>Surface</A
+> -&gt; <A HREF="Graphics-UI-SDL-SFont.html#t%3ASFont"
+>SFont</A
+> -&gt; (<A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/GHC-Types.html#t%3AInt"
+>Int</A
+>, <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/GHC-Types.html#t%3AInt"
+>Int</A
+>) -&gt; <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/GHC-Types.html#t%3AChar"
+>Char</A
+> -&gt; <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/System-IO.html#t%3AIO"
+>IO</A
+> <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/GHC-Unit.html#t%3A%28%29"
+>()</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AtextWidth"
+>textWidth</A
+> :: <A HREF="Graphics-UI-SDL-SFont.html#t%3ASFont"
+>SFont</A
+> -&gt; <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/Data-Char.html#t%3AString"
+>String</A
+> -&gt; <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/GHC-Types.html#t%3AInt"
+>Int</A
+></TD
+></TR
+><TR
+><TD CLASS="s8"
+></TD
+></TR
+><TR
+><TD CLASS="decl"
+><A HREF="#v%3AtextHeight"
+>textHeight</A
+> :: <A HREF="Graphics-UI-SDL-SFont.html#t%3ASFont"
+>SFont</A
+> -&gt; <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/GHC-Types.html#t%3AInt"
+>Int</A
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="section1"
+>Documentation</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="topdecl"
+><TABLE CLASS="declbar"
+><TR
+><TD CLASS="declname"
+><SPAN CLASS="keyword"
+>data</SPAN
+>  <A NAME="t:SFont"
+><A NAME="t%3ASFont"
+></A
+></A
+><B
+>SFont</B
+>  </TD
+><TD CLASS="declbut"
+><A HREF="src/Graphics-UI-SDL-SFont.html#SFont"
+>Source</A
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="topdecl"
+><TABLE CLASS="declbar"
+><TR
+><TD CLASS="declname"
+><A NAME="v:initFont"
+><A NAME="v%3AinitFont"
+></A
+></A
+><B
+>initFont</B
+> :: <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/Graphics-UI-SDL-Types.html#t%3ASurface"
+>Surface</A
+> -&gt; <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/System-IO.html#t%3AIO"
+>IO</A
+> <A HREF="Graphics-UI-SDL-SFont.html#t%3ASFont"
+>SFont</A
+></TD
+><TD CLASS="declbut"
+><A HREF="src/Graphics-UI-SDL-SFont.html#initFont"
+>Source</A
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+>Load a font from an SDL surface
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="topdecl"
+><TABLE CLASS="declbar"
+><TR
+><TD CLASS="declname"
+><A NAME="v:write"
+><A NAME="v%3Awrite"
+></A
+></A
+><B
+>write</B
+> :: <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/Graphics-UI-SDL-Types.html#t%3ASurface"
+>Surface</A
+> -&gt; <A HREF="Graphics-UI-SDL-SFont.html#t%3ASFont"
+>SFont</A
+> -&gt; (<A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/GHC-Types.html#t%3AInt"
+>Int</A
+>, <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/GHC-Types.html#t%3AInt"
+>Int</A
+>) -&gt; <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/Data-Char.html#t%3AString"
+>String</A
+> -&gt; <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/System-IO.html#t%3AIO"
+>IO</A
+> <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/GHC-Unit.html#t%3A%28%29"
+>()</A
+></TD
+><TD CLASS="declbut"
+><A HREF="src/Graphics-UI-SDL-SFont.html#write"
+>Source</A
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+>Write the specified text at the given coordinates on the surface
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="topdecl"
+><TABLE CLASS="declbar"
+><TR
+><TD CLASS="declname"
+><A NAME="v:writeChar"
+><A NAME="v%3AwriteChar"
+></A
+></A
+><B
+>writeChar</B
+> :: <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/Graphics-UI-SDL-Types.html#t%3ASurface"
+>Surface</A
+> -&gt; <A HREF="Graphics-UI-SDL-SFont.html#t%3ASFont"
+>SFont</A
+> -&gt; (<A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/GHC-Types.html#t%3AInt"
+>Int</A
+>, <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/GHC-Types.html#t%3AInt"
+>Int</A
+>) -&gt; <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/GHC-Types.html#t%3AChar"
+>Char</A
+> -&gt; <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/System-IO.html#t%3AIO"
+>IO</A
+> <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/GHC-Unit.html#t%3A%28%29"
+>()</A
+></TD
+><TD CLASS="declbut"
+><A HREF="src/Graphics-UI-SDL-SFont.html#writeChar"
+>Source</A
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="topdecl"
+><TABLE CLASS="declbar"
+><TR
+><TD CLASS="declname"
+><A NAME="v:textWidth"
+><A NAME="v%3AtextWidth"
+></A
+></A
+><B
+>textWidth</B
+> :: <A HREF="Graphics-UI-SDL-SFont.html#t%3ASFont"
+>SFont</A
+> -&gt; <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/Data-Char.html#t%3AString"
+>String</A
+> -&gt; <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/GHC-Types.html#t%3AInt"
+>Int</A
+></TD
+><TD CLASS="declbut"
+><A HREF="src/Graphics-UI-SDL-SFont.html#textWidth"
+>Source</A
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+>Returns the width in pixels of a given string rendered in the given font
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="topdecl"
+><TABLE CLASS="declbar"
+><TR
+><TD CLASS="declname"
+><A NAME="v:textHeight"
+><A NAME="v%3AtextHeight"
+></A
+></A
+><B
+>textHeight</B
+> :: <A HREF="Graphics-UI-SDL-SFont.html#t%3ASFont"
+>SFont</A
+> -&gt; <A HREF="http://hackage.haskell.org/packages/archive/SDL/0.5.9/doc/html/GHC-Types.html#t%3AInt"
+>Int</A
+></TD
+><TD CLASS="declbut"
+><A HREF="src/Graphics-UI-SDL-SFont.html#textHeight"
+>Source</A
+></TD
+></TR
+></TABLE
+></TD
+></TR
+><TR
+><TD CLASS="doc"
+>Returns the height of the font.
+</TD
+></TR
+><TR
+><TD CLASS="s15"
+></TD
+></TR
+><TR
+><TD CLASS="botbar"
+>Produced by <A HREF="http://www.haskell.org/haddock/"
+>Haddock</A
+> version 2.4.2</TD
+></TR
+></TABLE
+></BODY
+></HTML
+>
